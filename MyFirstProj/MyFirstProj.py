@@ -570,7 +570,122 @@
 #        super().__init__(length, width)
 #        self.height = height
 
-#-------------------------------------------------------------------------------Abstract Classes
+#-------------------------------------------------------------------------------Abstract Classes - Template (Cannot make an object)
+
+#from abc import ABC, abstractmethod
+
+#class Vehicle(ABC):
+
+#    @abstractmethod     #method to override
+#    def go(self):
+#        pass
 
 
+#class Car(Vehicle):
 
+#    def go(self):
+#        print("Go! Car")
+
+#car = Car()
+#car.go()
+
+#veh = Vehicle()
+
+#-------------------------------------------------------------------------------Objects as Parameters
+
+#class Car:
+
+#    color = None
+
+#def changeColor(vehicle, color):
+
+#    vehicle.color = color;
+
+#car = Car()
+
+#print(car.color)
+
+#changeColor(car, "red")
+#print(car.color)
+
+#--------------------------------------------------------------------------------Duck Typing - used when the methods/attributes are more important than the object
+
+#class Duck:
+
+#    def talk(self):
+#        print("The duck is quaking")
+
+#    def walk(self):
+#        print("The duck is waddling")
+
+#class Chicken:
+
+#    def talk(self):
+#        print("The chicken is clukking")
+
+#    def walk(self):
+#        print("The chicken is walking")
+
+
+#class Person:
+
+#    def catchDuck(self, duck):
+#        duck.talk()
+#        duck.walk()
+
+
+#person = Person()
+#duck = Duck()
+#chicken = Chicken()
+
+#person.catchDuck(duck)
+#person.catchDuck(chicken)  #still works since chicken has same methods used in catchDuck as a duck object
+
+#------------------------------------------------------------------------------------Walrus Oporator := - used to assign and use at the same time in one expression
+
+#print(happy := True)
+
+#foods = list()
+#while food := input("What food do you need?") != "quit":    #assigns input to food and checks condition in one line 
+#    foods.append(food)
+
+#-----------------------------------------------------------------------------------Assign Fuction to a variable
+
+#def hello():
+#    print("hello")
+
+#hi = hello
+#hello()
+#hi()
+
+#say = print
+#say("Wow")
+
+#-----------------------------------------------------------------------------------Higher Order Functions - a function that either accepts a function as an argument 
+#                                                                                                                                   or returns a function
+
+#FIRST PART
+
+#def loud(text):
+#    return text.upper()
+
+#def quiet(text):
+#    return text.lower()
+
+#def hello(funct):          #accepts function as parameter
+#    text = funct("hello")
+#    print(text)
+
+#hello(loud)
+
+#SECOND PART
+
+#def divisor(x):
+#    def dividend(y):
+#        return y/x
+#    return dividend        #returns function
+
+#divide = divisor(2)     #sets 2 --> x, returns dividend
+#print(divide(10))       #runs dividend(10)
+
+#------------------------------------------------------------------------------------Lambda Functions
