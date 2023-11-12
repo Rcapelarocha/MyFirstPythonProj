@@ -688,4 +688,203 @@
 #divide = divisor(2)     #sets 2 --> x, returns dividend
 #print(divide(10))       #runs dividend(10)
 
-#------------------------------------------------------------------------------------Lambda Functions
+#------------------------------------------------------------------------------------ Windows
+
+#from tkinter import *
+
+#widgets: GUI elements: buttons, textboxes, labels, images
+#windows: a container to hold or contain widgets
+
+#window = Tk()
+#window.geometry("420x420")                  #sets size of window
+#window.title("Title")
+
+#icon = PhotoImage(file = "image.png")       #windows image icon
+#window.iconphoto(True, icon)
+
+#window.config(background = "#5cfcff")       #background colour
+ 
+
+#window.mainloop()                           #places window on screen
+
+#------------------------------------------------------------------------------------- Button
+
+#from tkinter import *
+
+#def click():
+#    print("Hello!")
+#    
+#window = Tk()
+#button = Button(window, text = "Click Me")
+#button.config(command = click)
+                                                #changing button looks
+#button.config(bg = "red")
+#button.config(fg = "blue")
+#button.config(activebackground = "green")
+#button.config(activeforeground = "yellow")
+
+#image = PhotoImage(file = "icon.png")
+#button.config(image = image)
+#button.config(compound="top")           #to have label and image
+
+#button.pack()                           #places button on window
+#window.mainloop()
+
+#------------------------------------------------------------------------------------- Entry(Textbox)
+
+#from tkinter import *
+
+#def submit():
+#    username = entry.get()
+#    print("hello " + username)
+#    entry.config(state = DISABLED)
+
+#def delete():
+#    entry.delete(0,END)
+    
+#def backspace():
+#    entry.delete(len(entry.get())-1,END)
+
+#window = Tk()
+
+#entry = Entry(window, font = ("Arial", 50), bg = "black", fg = "green", show = "*")
+#entry.insert(0,"Default Text")
+#entry.pack(side = LEFT)
+
+
+#submit_button = Button(window, text = "Submit", command = submit)
+#submit_button.pack(side = RIGHT)
+
+#delete_button = Button(window, text = "Delete", command = delete)
+#delete_button.pack(side = LEFT)
+
+#backspace_button = Button(window, text = "Backspace", command = backspace)
+#backspace_button.pack(side = LEFT)
+
+#window.mainloop()
+
+#--------------------------------------------------------------------------------------- Label
+#from tkinter import *
+
+#window = Tk()
+
+#photo = PhotoImage(file = 'icon.png')
+
+#label = Label(window,  
+#              text = "Hello World",
+#              font = ("Arial", 40, "bold"),
+#              fg = 'green', 
+#              bg = 'red',
+#              relief = RAISED,  #Boarder
+#              bd = 10,
+#              padx = 20,
+#              pady = 20,
+#              image = photo)
+
+#label.place(x = 10, y = 0)
+
+#window.mainloop()
+
+#-------------------------------------------------------------------------------------- Check Boxes
+
+#from tkinter import *
+
+#def display():
+#    if x.get() == 1:
+#        print("True")
+#    else:
+#        print("false")
+    
+
+#window = Tk()
+#x = IntVar()
+
+#photo = PhotoImage(file = 'photo.png')
+
+#checkButton = Checkbutton(window,
+#                          text = 'I agree to something',
+#                          variable = x,
+#                          onvalue=1,    #can return different vals: string, bool, int
+#                          offvalue=0,
+#                          command = display,
+#                          font = ('Arial', 20),
+#                          fg = 'red',
+#                          bg = 'black',
+#                          activebackground= 'black',
+#                          activeforeground= 'pink',
+#                          padx = 20,
+#                          pady = 20,
+#                          image = photo)
+
+#checkButton.pack()
+#window.mainloop()
+
+#------------------------------------------------------------------------------------------- Radio Buttons - similar to checkboxes but can only select one
+
+#from tkinter import *
+
+#foods = ["pizza", 'hamburger', 'hotdog']
+
+#def order():
+#    print(x.get())
+
+#window = Tk()
+#x = IntVar()
+
+#for i in range(len(foods)):
+    
+#    radiobutton = Radiobutton(window,
+#                              text=foods[i],    #text of radio buttons
+#                              variable = x,     #groups radiobuttons if they share the same variable, only one button can be selected from the group
+#                              value = i,        #assigns each button a different value
+#                              command = order,
+#                              indicatoron = 0,  #removes ciecle indicators
+#                              width = 15)       #changes width of buttons
+    
+#    radiobutton.pack(anchor = 'w')          #w: west, 
+    
+#window.mainloop()
+
+#------------------------------------------------------------------------------------------- Sliding Scale
+
+#from tkinter import *
+
+#window = Tk()
+
+#def submit():
+#    print('Number:' + str(scale.get()))
+
+#scale = Scale(window,
+#              from_ = 0,
+#              to_ = 100,
+#              length = 600,
+#              orient = HORIZONTAL,
+#              showvalue=1,      # 1: show number, 0: dont show number
+#              tickinterval=10,  
+#              #resolution=25,    #increment of slider, messes with ticks
+#              troughcolor = 'red',
+#              fg = 'blue',
+#              bg = 'yellow')
+#button = Button(window, text = 'submit', command = submit)
+
+#button.pack()
+#scale.pack()
+#window.mainloop()
+
+#----------------------------------------------------------------------------------------------- Frame
+
+#from tkinter import *
+
+#window = Tk()
+
+#frame = Frame(window)
+#frame.pack()
+
+#button1 = Button(frame, text='w').pack(side = TOP)
+#button2 = Button(frame, text = 'a').pack(side = LEFT)
+#button3 = Button(frame, text = 's').pack(side = LEFT)
+#button4 = Button(frame, text = 'd').pack(side = LEFT)
+
+#window.mainloop()
+
+#----------------------------------------------------------------------------------------------
