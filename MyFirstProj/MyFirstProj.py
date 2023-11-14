@@ -887,4 +887,50 @@
 
 #window.mainloop()
 
-#----------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------- Grid
+
+#from tkinter import *
+
+#window = Tk()
+
+#titleLabel = Label(window,text="Enter your info",font=("Arial",25)).grid(row=0,column=0,columnspan=2)
+
+#firstNameLabel = Label(window,text="First name: ",width=20,bg="red").grid(row=1,column=0)
+#firstNameEntry = Entry(window).grid(row=1,column=1)
+
+#lastNameLabel = Label(window,text="Last name: ",bg="green").grid(row=2,column=0)
+#lastNameEntry = Entry(window).grid(row=2,column=1)
+
+#emailLabel = Label(window,text="email: ",bg="blue").grid(row=3,column=0)
+#emailEntry = Entry(window).grid(row=3,column=1)
+
+#submitButton = Button(window,text="Submit").grid(row=4,column=0,columnspan=2)
+
+#window.mainloop()
+
+#----------------------------------------------------------------------------------------------- Progress Bar
+
+#from tkinter import *
+#from tkinter.ttk import *
+#import time
+
+#def start():
+#    tasks = 10
+#    x = 0
+#    while(x<tasks):
+#        time.sleep(1)
+#        bar['value'] += 10
+#        x+=1
+        
+#        window.update_idletasks()
+
+#window = Tk()
+
+#bar = Progressbar(window, orient=HORIZONTAL, length = 300)
+#bar.pack()
+
+#button = Button(window, text = 'submit', command = start).pack()
+
+#window.mainloop()
+
+#-----------------------------------------------------------------------------------------------
