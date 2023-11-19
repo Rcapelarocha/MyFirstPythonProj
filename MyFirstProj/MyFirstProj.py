@@ -933,4 +933,43 @@
 
 #window.mainloop()
 
+#----------------------------------------------------------------------------------------------- Canvas
+#from tkinter import *
+#from tkinter.ttk import Style
+
+#window = Tk()
+
+#canvas = Canvas(window, height = 500, width = 500)
+#blueLine = canvas.create_line(0,0,500,500, fill = 'blue', width = 5)
+#rectangle = canvas.create_rectangle(50,50,250,250, fill = 'blue')
+#triangle = canvas.create_polygon(250,0, 500,500, 0,500,fill = 'cyan', outline = 'black', width = 5)
+#arc = canvas.create_arc(0,0,500,500, fill = 'green', style = PIESLICE, start = 180, extent = 180)
+#circle = canvas.create_oval(190,190,310,310, fill = 'black')
+#canvas.pack()
+
+#window.mainloop()
+
+#------------------------------------------------------------------------------------------------ Scrolling
+
+#from tkinter import *
+
+#window = Tk()
+#window.geometry('600x400')
+
+#canvas = Canvas(window, bg = 'black', scrollregion = (0,0,2000,5000))
+#canvas.pack(expand = True, fill = 'both')
+#canvas.create_line(0,0,2000,5000, fill = 'white')
+
+#Scrolling Bar
+
+#scrollbar = Scrollbar(window, orient = 'vertical', command = canvas.yview)
+#canvas.configure(yscrollcommand = scrollbar.set)
+#scrollbar.place(relx = 1, rely = 0, relheight = 1, anchor = 'ne')
+
+
+#Mouse Scrolling
+#canvas.bind('<MouseWheel>', lambda event: canvas.yview_scroll(-int(event.delta/60), "units"))
+
+#window.mainloop()
+
 #-----------------------------------------------------------------------------------------------
